@@ -2,49 +2,56 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Começo de Tudo</title>
- 
+    <title>Pesquisa da Detetive</title>
 
-    
     <style>
-     
-        /*mover botões*/
-       
-            #btnDados { background-color: blue; /*O botão nasce azul*/
-            #btnDados:hover { background-color: darkblue; }
-         #btnEndereco 
-                    margin-left: 50px; /* jogando um pouco para a direita */
-                   margin-down: 200px; /* jogando um pouco para baixo*/
-                  }
+        /* Centraliza e organiza a imagem e o botão lado a lado */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* Estilo do botão de pesquisar */
+        #btnEndereco {
+            background-color: #008CBA; /* Cor azul moderna */
+            color: white;              /* Letra branca */
+            border: none;              /* Remove a borda padrão */
+            padding: 12px 24px;        /* Deixa o botão gordinho */
+            border-radius: 6px;        /* Cantos arredondados */
+            font-size: 16px;           /* Tamanho da letra */
+            cursor: pointer;           /* Mãozinha de clique */
+            
+            /* Posicionamento na frente da detetive */
+            margin-left: 20px;         /* Afasta o botão da imagem */
+            vertical-align: middle;    /* Alinha a altura com o meio da imagem */
+        }
+
+        /* Efeito de acender ao passar o mouse */
+        #btnEndereco:hover {
+            background-color: #005f7a; /* Azul mais escuro */
+        }
+
+        /* Garante que a imagem fique alinhada com o botão */
+        img {
+            vertical-align: middle;
+        }
     </style>
 </head>
 <body>
 
     <h1>Minha Página</h1>
-   
-    <!-- Sua imagem -->
-    <!-- Código correto para exibir a imagem direto na tela -->
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiuNVEdQJVsKEiZPcOaIa6pcT7UoS1sp6TwV07gXM19X9MtzVBJdw_6qCW58vpyOm7XMmm9tg6hxTW4SFHLEADBihfVhIhkQCYkzy0oJMU7HcGZ2nuwKn5kFwjZemYmqQvBtq57dvTP-HU/s800/job_tantei_woman.png" alt="Detetive procurando erros" width="200">
 
-    
-    <!-- Botões com IDs diferentes para o JavaScript não se confundir -->
-     <button id="btnEndereco" class="texto-destaque">pesquise endereço</button>
-       <button id="btnDados" class="texto-destaque">insira seus dados</button>
+    <!-- 1. A Detetive vem primeiro -->
+    <img src="https://googleusercontent.com" alt="Detetive" width="150">
 
-    
+    <!-- 2. O único botão de pesquisar vem logo na frente dela -->
+    <button id="btnEndereco">pesquise endereço</button>
 
-    <!-- O código que dá vida aos botões -->
+    <!-- O JavaScript que faz o botão abrir o Google Maps -->
     <script>
-        // Funcionalidade do botão 1
-        const botaoDados = document.getElementById('btnDados');
-        botaoDados.addEventListener('click', () => {
-            alert('Você clicou em: insira seus dados');
-        });
-
-        // Funcionalidade do botão 2
         const botaoEndereco = document.getElementById('btnEndereco');
         botaoEndereco.addEventListener('click', () => {
-            alert('Você clicou em: pesquise endereço');
+            window.open('https://google.com', '_blank');
         });
     </script>
 
